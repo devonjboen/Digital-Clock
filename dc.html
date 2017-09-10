@@ -6,14 +6,22 @@
 <script>
 var time = []
 onload = function digClock() {
+var meridiem = "AM"
 var currentTime = new Date();
 var hours = currentTime.getHours();
 var minutes = currentTime.getMinutes();
 var seconds = currentTime.getSeconds();
 if (hours > 12) {
 hours = hours - 12
+var meridiem = " PM"
 }
-var time = hours + ":" + minutes + ":" + seconds;
+if  (hours === 0) {
+hours = 12;
+}
+if  (seconds < 10) {
+seconds = "0" + seconds;
+}
+var time = hours + ":" + minutes + ":" + seconds + meridiem;
 document.getElementById("clock").innerHTML=time;
 }
 </script>
