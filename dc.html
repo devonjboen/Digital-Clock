@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<title>Digital Clock</title>
+<meta http-equiv="refresh" content="1"/>
+<head>
+<script>
+var time = []
+onload = function digClock() {
+var currentTime = new Date();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+var seconds = currentTime.getSeconds();
+var time = hours + ":" + minutes + ":" + seconds;
+document.getElementById("clock").innerHTML=time;
+}
+</script>
+
+<style>
+#clock { 
+font-family: "arial", "sans-serif";
+color: white;
+text-align: center;
+display: table-cell;
+vertical-align: middle;
+font-size: 500%;
+background-color: #FF00FF;
+height: 200px;
+width: 50%;
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="clock"></div>
+</body>
+
+</html>
